@@ -1,0 +1,13 @@
+kind: pipeline
+name: build-test
+
+platform:
+  arch: arm
+  os: linux
+
+steps:
+- name: test
+  image: golang
+  commands:
+  - go build
+  - go test
